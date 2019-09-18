@@ -182,6 +182,7 @@ construct_runtime!(
 #### 7. Compile! 
 And be sure you are under `/node-template` folder
 ```shell
+$ ./scripts/build.sh
 $ cargo build --release
 ```
 See complete [lib.rs](./workshop-china-september/lib.rs) and [poe.rs](./workshop-china-september/poe.rs)
@@ -208,5 +209,5 @@ $ xxd -p ./node-template/runtime/wasm/target/wasm32-unknown-unknown/release/node
 [Clone and follow instruction from the Substrate Package](https://github.com/shawntabrizi/substrate-package)
 [Join and ask questions in the Substrate Technical channel on Riot](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org)
 [Explore and read the Substrate Runtime Module Library](https://github.com/paritytech/substrate/tree/master/srml)
-
+[How to correctly upgrade a runtime on Substrate node?](https://stackoverflow.com/questions/57933433/how-to-correctly-upgrade-a-runtime-on-substrate-node/57934827#57934827)
 
