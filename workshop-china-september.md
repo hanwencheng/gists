@@ -198,6 +198,8 @@ $ xxd -p ./node-template/runtime/wasm/target/wasm32-unknown-unknown/release/node
 ```
 3. Update it under `Sudo` and paste the code to `setCode`
 
+![upgrade chain](./workshop-china-september/upgradeChain.png)
+
 ## Further reading
 
 [Substrate Tutorials](https://substrate.dev/en/tutorials)
