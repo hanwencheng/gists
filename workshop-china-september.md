@@ -116,10 +116,10 @@ decl_module! {
             let sender = ensure_signed(origin)?;
 
             // Verify that the specified proof has not been claimed yet
-            ensure!(!Proofs::<T>::exists(&digest), "This proof has already been claimed");
+            ensure!(!<Proofs::<T>>::exists(&digest), "This proof has already been claimed");
 
             // Store the proof and the claim owner
-            Proofs::<T>::insert(&digest, sender.clone());
+            <Proofs::<T>>::insert(&digest, sender.clone());
 
             // Emit an event that the claim was stored
             Self::deposit_event(RawEvent::ProofStored(sender, digest));
@@ -131,7 +131,7 @@ decl_module! {
             let sender = ensure_signed(origin)?;
 
             // Verify that the specified proof has been claimed
-            ensure!(Proofs::<T>::exists(&digest), "This proof has not been stored yet");
+            ensure!(<Proofs::<T>>::exists(&digest), "This proof has not been stored yet");
 
             // Get owner of the claim
             let owner = Self::proofs(&digest);
@@ -140,7 +140,7 @@ decl_module! {
             ensure!(sender == owner, "You must own this proof to erase it");
 
             // Remove claim from storage
-            Proofs::<T>::remove(&digest);
+            <Proofs::<T>>::remove(&digest);
 
             // Emit an event that the claim was erased
             Self::deposit_event(RawEvent::ProofErased(sender, digest));
@@ -180,9 +180,11 @@ construct_runtime!(
 ```
 
 #### 7. Compile! 
+And be sure you are under `/node-template` folder
 ```shell
-cargo build --release
+$ cargo build --release
 ```
+See complete [lib.rs](./workshop-china-september/lib.rs) and [poe.rs](./workshop-china-september/poe.rs)
 
 For detail, check Shawn's [Create your first Substrate blockchan tutorial](https://hackmd.io/B-jWKzRCQmq1gPtFFkXjFA#Proof-Of-Existence-Chain), which maybe slightly difference from the tutorial here.
 
@@ -192,6 +194,17 @@ For detail, check Shawn's [Create your first Substrate blockchan tutorial](https
 1. open the blockechain explorer here `https://polkadot.js.org/apps/#/sudo`
 2. copy the wasm file into clipboard 
 ```shell
-$ xxd -p ./node_template_runtime_wasm.compact.wasm | pbcopy
+$ xxd -p ./node-template/runtime/wasm/target/wasm32-unknown-unknown/release/node_template_runtime_wasm.compact.wasm | pbcopy
 ```
 3. Update it under `Sudo` and paste the code to `setCode`
+
+## Further reading
+
+[Substrate Tutorials](https://substrate.dev/en/tutorials)
+[Substrate Collectables Workshop](https://substrate.dev/substrate-collectables-workshop/#/)
+[A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d)
+[Clone and follow instruction from the Substrate Package](https://github.com/shawntabrizi/substrate-package)
+[Join and ask questions in the Substrate Technical channel on Riot](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org)
+[Explore and read the Substrate Runtime Module Library](https://github.com/paritytech/substrate/tree/master/srml)
+
+
