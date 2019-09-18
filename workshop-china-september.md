@@ -63,23 +63,16 @@ Create new file called `poe.rs` under `./node-template/runtime/src`, now let's a
 
 #### 1. Import necessary dependencies
 ```rust
-use support::{decl_module, decl_storage, decl_event, ensure,
-    StorageMap, dispatch::Result};
-use support::traits::{Currency, ReservableCurrency};
+use support::{decl_module, decl_storage, decl_event, ensure, StorageMap};
 use rstd::vec::Vec;
 use system::ensure_signed;
-use runtime_primitives::traits::As;
-
-const POE_FEE: u64 = 1000;
-
-type BalanceOf<T> = <<T as Trait>::Currency as Currency<<T as system::Trait>::AccountId>>::Balance;
 ```
 
 #### 2. Configure your module to emit events
 
 ```rust
-pub trait Trait: timestamp::Trait {
-    type Currency: ReservableCurrency<Self::AccountId>;
+pub trait Trait: system::Trait {
+    /// The overarching event type.
     type Event: From<Event<Self>> + Into<<Self as system::Trait>::Event>;
 }
 ```
@@ -88,12 +81,11 @@ pub trait Trait: timestamp::Trait {
 
 ```rust
 decl_event!(
-	pub enum Event<T> where
-        <T as system::Trait>::AccountId,
-        <T as timestamp::Trait>::Moment
-    {
-        ClaimCreated(AccountId, Moment, Vec<u8>),
-		ClaimRevoked(AccountId, Vec<u8>),
+    pub enum Event<T> where AccountId = <T as system::Trait>::AccountId {
+        // Event emitted when a proof has been stored into chain storage
+        ProofStored(AccountId, Vec<u8>),
+        // Event emitted when a proof has been erased from chain storage
+        ProofErased(AccountId, Vec<u8>),
     }
 );
 ```
@@ -101,8 +93,11 @@ decl_event!(
 #### 4. Add the storage/state items
 ```rust
 decl_storage! {
-	trait Store for Module<T: Trait> as POEStorage {
-		Proofs get(proofs): map Vec<u8> => (T::AccountId, T::Moment);
+	trait Store for Module<T: Trait> as PoeStorage {
+        // Define a 'Proofs' storage item for a map with
+        // the proof digest as the key, and associated AccountId as value.
+        // The 'get(proofs)' is the default getter.
+		Proofs get(proofs): map Vec<u8> => T::AccountId;
 	}
 }
 ```
@@ -110,38 +105,48 @@ decl_storage! {
 #### 5. Add your callable "public" module functions
 ```rust
 decl_module! {
+    /// The module declaration.
     pub struct Module<T: Trait> for enum Call where origin: T::Origin {
-        fn deposit_event<T>() = default;
+        // A default function for depositing events
+        fn deposit_event() = default;
 
-        fn create_claim(origin, digest: Vec<u8>) -> Result {
+        // Allow a user to store an unclaimed proof
+        fn store_proof(origin, digest: Vec<u8>) {
+            // Verify that the incoming transaction is signed
             let sender = ensure_signed(origin)?;
 
-            ensure!(!<Proofs<T>>::exists(&digest), "This digest has already been claimed");
-            let time = <timestamp::Module<T>>::now();
+            // Verify that the specified proof has not been claimed yet
+            ensure!(!Proofs::<T>::exists(&digest), "This proof has already been claimed");
 
-            T::Currency::reserve(&sender, BalanceOf::<T>::sa(POE_FEE))?;
-            <Proofs<T>>::insert(&digest, (sender.clone(), time.clone()));
+            // Store the proof and the claim owner
+            Proofs::<T>::insert(&digest, sender.clone());
 
-            Self::deposit_event(RawEvent::ClaimCreated(sender, time, digest));
-            Ok(())
+            // Emit an event that the claim was stored
+            Self::deposit_event(RawEvent::ProofStored(sender, digest));
         }
 
-        fn revoke_claim(origin, digest: Vec<u8>) -> Result {
+        // Allow the owner of a proof to erase their claim
+        fn erase_proof(origin, digest: Vec<u8>) {
+            // Determine who is calling the function
             let sender = ensure_signed(origin)?;
 
-            ensure!(<Proofs<T>>::exists(&digest), "This digest has not been claimed yet");
-            let (owner, _time) = Self::proofs(&digest);
+            // Verify that the specified proof has been claimed
+            ensure!(Proofs::<T>::exists(&digest), "This proof has not been stored yet");
 
-            ensure!(sender == owner, "You must own this claim to revoke it");
+            // Get owner of the claim
+            let owner = Self::proofs(&digest);
 
-            <Proofs<T>>::remove(&digest);
-            T::Currency::unreserve(&sender, BalanceOf::<T>::sa(POE_FEE));
+            // Verify that sender of the current call is the claim owner
+            ensure!(sender == owner, "You must own this proof to erase it");
 
-            Self::deposit_event(RawEvent::ClaimRevoked(sender, digest));
-            Ok(())
+            // Remove claim from storage
+            Proofs::<T>::remove(&digest);
+
+            // Emit an event that the claim was erased
+            Self::deposit_event(RawEvent::ProofErased(sender, digest));
         }
     }
-}      
+}
 ```
 
 #### 6. Add module into runtime
