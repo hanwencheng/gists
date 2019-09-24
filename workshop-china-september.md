@@ -192,14 +192,14 @@ For detail, check Shawn's [Create your first Substrate blockchan tutorial](https
 ## Exercise 3: Perform a forkless upgrade to our blockchain!
 
 #### 
-1. open the blockechain explorer here `https://polkadot.js.org/apps/#/sudo`
-2. copy the wasm file into clipboard 
-```shell
-$ xxd -p ./node-template/runtime/wasm/target/wasm32-unknown-unknown/release/node_template_runtime_wasm.compact.wasm | pbcopy
-```
-3. Update it under `Sudo` and paste the code to `setCode`
-
+1. open the blockchain explorer here `https://polkadot.js.org/apps/#/sudo`
+2. Upload the wasm file, you could click on the small file icon on the right side, and choose the wasm under `./node-template/runtime/wasm/target/wasm32-unknown-unknown/release/node_template_runtime_wasm.compact.wasm`
 ![upgrade chain](./workshop-china-september/upgradeChain.png)
+
+3. Click `submit` to broadcast the new runtime to other users.
+4. Refresh the page to reload the RPC bindings.
+5. Now you could call the dispatchable functions or check the state with our new `poe` module!
+
 
 ## Further reading
 
