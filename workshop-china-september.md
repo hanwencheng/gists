@@ -189,6 +189,14 @@ See complete [lib.rs](./workshop-china-september/lib.rs) and [poe.rs](./workshop
 
 For detail, check Shawn's [Create your first Substrate blockchan tutorial](https://hackmd.io/B-jWKzRCQmq1gPtFFkXjFA#Proof-Of-Existence-Chain), which maybe slightly difference from the tutorial here.
 
+#### 8. Test POE with awesome UI!
+
+A Web App is live [here](https://substrate.dev/substrate-front-end-template/).
+
+If you want to connect with your local host, please folk the [substrate front end template](https://github.com/substrate-developer-hub/substrate-front-end-template/), 
+and comment in this [line](https://github.com/substrate-developer-hub/substrate-front-end-template/) to connect to local node, also comment out
+the next line with remote websocket link.
+
 ## Exercise 3: Perform a forkless upgrade to our blockchain!
 
 #### 
@@ -201,13 +209,18 @@ For detail, check Shawn's [Create your first Substrate blockchan tutorial](https
 5. Now you could call the dispatchable functions or check the state with our new `poe` module!
 
 
+## Frequent ask questions:
+
+- [How to migrate the blockchain state with on_initialize function](https://stackoverflow.com/questions/56699795/what-order-is-on-initialize-invoked-across-different-modules-in-a-substrate-ru)
+- [When need to use purge-chain for the upgrade](https://stackoverflow.com/questions/57933433/how-to-correctly-upgrade-a-runtime-on-substrate-node)
+
 ## Further reading
 
-[Substrate Tutorials](https://substrate.dev/en/tutorials)
-[Substrate Collectables Workshop](https://substrate.dev/substrate-collectables-workshop/#/)
-[A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d)
-[Clone and follow instruction from the Substrate Package](https://github.com/shawntabrizi/substrate-package)
-[Join and ask questions in the Substrate Technical channel on Riot](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org)
-[Explore and read the Substrate Runtime Module Library](https://github.com/paritytech/substrate/tree/master/srml)
-[How to correctly upgrade a runtime on Substrate node?](https://stackoverflow.com/questions/57933433/how-to-correctly-upgrade-a-runtime-on-substrate-node/57934827#57934827)
+- [Substrate Tutorials](https://substrate.dev/en/tutorials)
+- [Substrate Collectables Workshop](https://substrate.dev/substrate-collectables-workshop/#/)
+- [A brief summary of everything Substrate and Polkadot](https://medium.com/polkadot-network/a-brief-summary-of-everything-substrate-and-polkadot-f1f21071499d)
+- [Clone and follow instruction from the Substrate Package](https://github.com/shawntabrizi/substrate-package)
+- [Join and ask questions in the Substrate Technical channel on Riot](https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org)
+- [Explore and read the Substrate Runtime Module Library](https://github.com/paritytech/substrate/tree/master/srml)
+- [How to correctly upgrade a runtime on Substrate node?](https://stackoverflow.com/questions/57933433/how-to-correctly-upgrade-a-runtime-on-substrate-node/57934827#57934827)
 
