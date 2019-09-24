@@ -197,6 +197,8 @@ If you want to connect with your local host, please folk the [substrate front en
 and comment in this [line](https://github.com/substrate-developer-hub/substrate-front-end-template/) to connect to local node, also comment out
 the next line with remote websocket link.
 
+The UI part code is [here](https://github.com/substrate-developer-hub/substrate-front-end-template/blob/master/src/examples/ProofOfExistence.jsx)
+
 ## Exercise 3: Perform a forkless upgrade to our blockchain!
 
 #### 
