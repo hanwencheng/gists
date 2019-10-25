@@ -38,6 +38,9 @@ Basically the HDKD ease the management & storiing of variant keys / recovery phr
 * frequent transactions that cannot (easily) be associated
 * distributing keys for multi signature.
 
+Especially for soft derivated keys:
+One may distribute the public key instead of private key, so that the owner's of parent publick key could derive child public key to monitor the transactions on the address.
+
 ## Potental Risks
 
 Some related security reality is:
