@@ -12,6 +12,7 @@
 Path also refers to the Chaincode which described in [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki/), it is totally different from BIP-32 style:
 * Soft derivation start with single slash, like: `/soft`
 * Hard derivation start with double slash, like: `//hard`
+
 The encoded strings follows are limited to 32 Bytes.
 
 ## Difference of hard and soft derivated keys.
