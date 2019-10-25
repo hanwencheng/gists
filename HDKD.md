@@ -26,6 +26,8 @@ The key difference is that:
 hard - Public key do not has a corresponding derivation, derived public key is not linked with parent public key, it can not be proved. 
 soft - Public key has a corresponding derivation, derived public key is linked with parent public key, it can be proved. 
 
+Soft derivation method has a pro here is that one could derive child public keys of a given parent key without knowing any private key.
+
 ## Use cases
 
 Basically the HDKD ease the management & storiing of variant keys / recovery phrases. In addition to that it enables:
