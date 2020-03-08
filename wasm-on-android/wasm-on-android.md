@@ -42,6 +42,19 @@ previously-added target, `rustup target remove`.
 
 ## Linux
 
+Install dependencies
+
+```shell
+sudo apt-get update
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
+# add sdk manager and sdk tools
+sudo apt-get install -y lib32z1 openjdk-8-jdk
+# add path variable
+
+# install  substrate
+sudo apt install -y cmake pkg-config libssl-dev git gcc build-essential clang libclang-dev
+```
+
 ```shell
 rustup update nightly 
 
@@ -54,3 +67,25 @@ rustup update
 ```
 
 then build stand alone toolchain 
+
+set android related environment variables
+
+```shell
+export ANDROID_HOME=/home/hanwen/Library/android-sdks
+export ANDROID_SDK_ROOT=/home/hanwen/Library/android-sdks
+export NDK_HOME=/home/hanwen/Library/android-ndk-r21
+
+#install sdk
+sdkmanager "platform-tools" "platforms;android-29" --sdk_root=${ANDROID_HOME}
+
+# build nkd with sdk
+${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 26 --arch arm64 --install-dir NDK/arm64
+${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 26 --arch arm --install-dir NDK/arm
+${NDK_HOME}/build/tools/make_standalone_toolchain.py --api 26 --arch x86 --install-dir NDK/x86
+```
+
+### Build Substrate node 
+
+```shell
+cargo build --target aarch64-linux-android --release
+```
