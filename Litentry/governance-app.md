@@ -10,25 +10,25 @@ Short description: Governance-focused Mobile App for all Substrate-based network
 ---
 ## 1. Context of Proposal
 
-Hanwen Cheng is the previous product owner of Parity Signer. He has rich experience in building mobile and web applications, and also very familiar with Substrate based tools.
-
-Litentry Technologies GmbH is a technology company focus on building a cross-chain identity aggregator. Which includes the substrate-based network and related tools. The team has solid substrate development experience and also focus on mobile engineering.
+Hanwen Cheng is the previous product owner of Parity Signer. He has rich experience in building mobile and web applications, and also very familiar with Substrate based tools. Now working for Litentry Technologies GmbH, the company is a technology company focus on building a cross-chain identity aggregator. Which includes the substrate-based network and related tools. The team has solid substrate development experience and also focus on mobile engineering.
 
 ## 2.	Problem statement: 
 
-a.Low Voting Participation Rate: Currently the on-chain governance participation rate is quite low, even for big decisions like Kusama denomination, there is only about 10% of staker holder take part in the vote.
+There are a few identified issues when it comes to on-chain governance as we experience it on Polkadot and Kusama:
 
-b. Missing Identity Governance Stats: When voting for the council members, it is hard to know who make the most contribution to the ecosystem and who participates most in the discussions. There is no dashboard to show the on-chain governance stats of identity. Also, on Polkadot.js app and Polkassembly, the tooltip of identity is limited in certain fields, need more information when user browser and attend governance.
+a.Low Voting Participation Rate: Currently the on-chain governance participation rate is quite low, even for controversial decisions like Kusama redenomination, (where there is only about 10% of staker holder take part in the vote).
 
-c. Currently there is only Polkawallet has native support for governance functions after browsing the wallets from https://wiki.polkadot.network/docs/en/build-wallets . The others using integrated governance DApp in a WebView, most wallets do not even have governance functions. Each mobile app has its own governance UI, the engineering power is wasted and lacks interoperability.   
+b. Missing Identity Governance Stats: When voting for the council members, it is hard to know who, from all councillors, has made the most contributions to the ecosystem and who has participated the most in the discussions: Currently, there is no dashboard to show on-chain governance stats of identity. Also, on Polkadot.js Apps and Polkassembly, the identity tooltip is limited to certain fields, therefore more information is needed when user browse and participate in governance.
+
+c. After browsing the wallets listed on https://wiki.polkadot.network/docs/en/build-wallets, currently there is only Polkawallet native support for governance module. The other wallets either use integrated governance DApp in a WebView, or do not even governance module integration at the moment. Each mobile app has its own governance UI, the engineering power is wasted and lacks interoperability.   
 
 Imtoken |  Math Wallet | Polkawallet
 :-------------------------:|:-------------------------:|:---|
 ![imtoken](./imgs/GovernanceImtoken.jpeg)  |  ![mathwallet](./imgs/GovernanceMath.jpeg)| ![polkawallet](./imgs/GovernancePolkawallet.jpeg)
 
-d. The polkadot.js app is mostly used for experienced users or developers. In addition, it includes all the UI to interact with the substrate-based blockchain, and it aims to be a general-purpose front-end application.
+d. Polkadot.js Apps is mostly used for experienced users or developers. In addition, it includes all the UI to interact with substrate-based blockchains, and it aims to be a general-purpose front-end application.
 
-e. Currently, there is no any mobile application could relay the transaction from other wallets on Polkadot ecosystem, Parity Signer and Math Wallet could sign the transaction from Polkadot.js. The wallet ecosystem is relatively closed. 
+e. Currently, there is no mobile application to relay the transaction from other wallets on the Polkadot ecosystem: Parity Signer and Math Wallet could sign the transaction from Polkadot.js Apps. The wallet ecosystem is relatively small. 
 
 ## 3.	Proposal Objective/solution/s:
 
@@ -36,9 +36,9 @@ e. Currently, there is no any mobile application could relay the transaction fro
 
 We want to create a governance mobile application which could:
 
-1. Offer native governance support integrate with Polkadot UI and Polkassembly off-chain discussion. 
-2. Provider identity governance statistics for user who has participated in the governance and provide gamification score to incentive user to join governance.
-3. Provider interoperability with other mobile wallets (QR code / inter-app communication) to let them sign the governance action. 
+1. Offer native governance support integrated to Polkadot UI and Polkassembly off-chain discussion. 
+2. Provide identity governance statistics for users who participated in governance and provide gamification score to incentive users to join governance.
+3. Provide interoperability with other mobile wallets (QR code / inter-app communication) to let them sign governance calls. 
  
 |Governance Ecosystem Before|Governance Ecosystem Before|
 |-------------------------|-------------------------|
@@ -80,7 +80,7 @@ We want to create a governance mobile application which could:
 
 ## 4. Why Polkadot Network.
 
-The governance on Polkadot affects most of the people, and it is of the most important among all the substrate-based networks. 
+The governance on Polkadot affects most users and it is of the most important features among all substrate-based networks. 
 
 The technical implementation does not have much difference when we compare Polkadot/Kusama/other Substrate-based networks. So we are doing the work firstly on both Polkadot and Kusama, and then it will be extended to all the substrate-based networks.
 
