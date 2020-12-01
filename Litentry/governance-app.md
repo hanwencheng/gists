@@ -50,14 +50,14 @@ We want to create a governance mobile application which could:
 
 ### Solutions / Milestones
 
-#### Milestone 1: On-chain governance basic support
-* Native governance actions support on Polkadot/Kusama
-* Enable interaction with Parity Signer with QR code.
-
-#### Milestone 2: Integrate identity registration
+#### Milestone 1: Integrate identity registration
 * Offer user interface to register Identity on Polkadot/Kusama.
 * Submit a new automatic registrar with the status of each field on Polkadot/Kusama.
 * Show Identity registration Status on Polkadot/Kusama. 
+
+#### Milestone 2: On-chain governance basic support
+* Native governance actions support on Polkadot/Kusama
+* Enable interaction with Parity Signer with QR code.
 
 #### Milestone 3: Identity Dashboard
 * Show identity on-chain governance states on Polkadot/Kusama.
@@ -90,13 +90,13 @@ The technical implementation does not have much difference when we compare Polka
 
  ## 5. Payments and Conditions
  
- |Milestones | estimate development time | total cost | DOT value |
+ |Milestones | estimate development time | total cost (USD) | DOT value |
  |---|---|---|---|
- |Milestone 1|  
- |Milestone 2|
- |Milestone 3|
- |Milestone 4|
- |Milestone 5|
+ |Milestone 1|  100 | 8000 |
+ |Milestone 2|  100 | 8000 | 
+ |Milestone 3|  100 | 8000 | 
+ |Milestone 4|  100 | 8000 |
+ |Milestone 5|  100 | 8000 |
  
  
  
