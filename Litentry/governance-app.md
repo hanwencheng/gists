@@ -10,7 +10,11 @@ Short description: Governance-focused Mobile App for all Substrate-based network
 ---
 ## 1. Context of Proposal
 
-Hanwen Cheng is the previous product owner of Parity Signer. He has rich experience in building mobile and web applications, and also very familiar with Substrate based tools. Now working for Litentry Technologies GmbH, the company is a technology company focus on building a cross-chain identity aggregator. Which includes the substrate-based network and related tools. The team has solid substrate development experience and also focus on mobile engineering.
+Hanwen Cheng is the previous product owner of Parity Signer. He has rich experience in building mobile and web applications, also very familiar with Substrate based tools. Now working for Litentry Technologies GmbH, the company is a technology company focus on building a cross-chain identity aggregator. Which includes the substrate-based network and related tools. The team has solid substrate development experience and focus on mobile engineering.
+
+Aggregated identity means an identity linked with accounts from different blockchains and off-chain applications/services, which represent the owner behind the accounts, and further present the owner's credibility and reputation from different aspects. In this proposal, we provide a governance app, with gathered participants' info integrated, it could facilitate the governance process, and in the future it could integrate participants' more information from linked accounts on other networks, and encourage more user to join on-chain governance once we provide Litentry native token as incentives. 
+
+Though Polkadot use Phragmén Method to equalize stake holder's voting power in elections, in the future there might be blockchains add reputation of identity in calculating voting power in elections. That is why we think identity is critical in governance and need to gather and show participants info in this mobile app.
 
 ## 2.	Problem statement: 
 
@@ -28,7 +32,7 @@ Imtoken |  Math Wallet | Polkawallet
 
 d. Polkadot.js Apps is mostly used for experienced users or developers. In addition, it includes all the UI to interact with substrate-based blockchains, and it aims to be a general-purpose front-end application.
 
-e. Currently, there is no mobile application to relay the transaction from other wallets on the Polkadot ecosystem: Parity Signer and Math Wallet could sign the transaction from Polkadot.js Apps. The wallet ecosystem is relatively small. 
+e. Currently, there is no mobile application could relay the transaction from other wallets on the Polkadot ecosystem. And only few mobile wallets like Parity Signer and Math Wallet could sign the transaction from Polkadot.js Apps. The wallets' ecosystems are relatively closed. 
 
 ## 3.	Proposal Objective/solution/s:
 
@@ -37,17 +41,17 @@ e. Currently, there is no mobile application to relay the transaction from other
 We want to create a governance mobile application which could:
 
 1. Offer native governance support integrated to Polkadot UI and Polkassembly off-chain discussion. 
-2. Provide identity governance statistics for users who participated in governance and provide gamification score to incentive users to join governance.
+2. Provide participants governance statistics and provide gamification score to incentive users to join governance.
 3. Provide interoperability with other mobile wallets (QR code / inter-app communication) to let them sign governance calls. 
  
-|Governance Ecosystem Before|Governance Ecosystem Before|
+|Current Governance Ecosystem| Ideal Governance Ecosystem|
 |-------------------------|-------------------------|
 |![imtoken](./imgs/governanceBefore.png)|![mathwallet](./imgs/GovernanceNow.png)|
 
 ### Solutions / Milestones
 
 #### Milestone 1: On-chain governance basic support
-* Native OCG(on-chain governance) actions support on Polkadot/Kusama
+* Native governance actions support on Polkadot/Kusama
 * Enable interaction with Parity Signer with QR code.
 
 #### Milestone 2: Integrate identity registration
@@ -56,7 +60,7 @@ We want to create a governance mobile application which could:
 * Show Identity registration Status on Polkadot/Kusama. 
 
 #### Milestone 3: Identity Dashboard
-* Show identity OCG(on-chain governance) states on Polkadot/Kusama.
+* Show identity on-chain governance states on Polkadot/Kusama.
 * Native support for off-chain discussion from Polkassemby
 
 #### Milestone 4 Inter-app communication
