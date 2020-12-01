@@ -88,7 +88,7 @@ The governance on Polkadot affects most users and it is of the most important fe
 
 The technical implementation does not have much difference when we compare Polkadot/Kusama/other Substrate-based networks. So we are doing the work firstly on both Polkadot and Kusama, and then it will be extended to all the substrate-based networks.
 
- ## 5. Payments and Conditions
+ ## 5. Payments and Conditions (TBD)
  
  |Milestones | estimate development time | total cost (USD) | DOT value |
  |---|---|---|---|
