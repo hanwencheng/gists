@@ -44,9 +44,9 @@ We want to create a governance mobile application which could:
 2. Provide participants governance statistics and provide gamification score to incentive users to join governance.
 3. Provide interoperability with other mobile wallets (QR code / inter-app communication) to let them sign governance calls. 
  
-|Current Governance Ecosystem| Ideal Governance Ecosystem|
+|Current Governance Ecosystem| Targeting Governance Ecosystem|
 |-------------------------|-------------------------|
-|![imtoken](./imgs/governanceBefore.png)|![mathwallet](./imgs/GovernanceNow.png)|
+|![imtoken](./imgs/governanceBefore.png)|![mathwallet](./imgs/governanceNow.png)|
 
 ### Solutions / Milestones
 
