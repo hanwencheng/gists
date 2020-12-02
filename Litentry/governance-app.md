@@ -10,7 +10,7 @@ Short description: Governance-focused Mobile App for all Substrate-based network
 ---
 ## 1. Context of Proposal
 
-Hanwen Cheng is the previous product owner of Parity Signer. He has rich experience in building mobile and web applications, also very familiar with Substrate based tools. Now working for Litentry Technologies GmbH, the company is a technology company focus on building a cross-chain identity aggregator. Which includes the substrate-based network and related tools. The team has solid substrate development experience and focus on mobile engineering.
+Hanwen Cheng is the previous product owner of [Parity Signer](https://github.com/paritytech/parity-signer). He has rich experience in building mobile and web applications, also very familiar with Substrate based tools. Now working for [Litentry](https://www.litentry.com/) Technologies GmbH, the company is a technology company focus on building a [cross-chain identity aggregator](https://litentry.medium.com/why-we-need-cross-chain-identity-on-polkadot-d59a90c9329c). Which includes the substrate-based network and related tools. The team has solid substrate development experience and focus on mobile engineering.
 
 Aggregated identity means an identity linked with accounts from different blockchains and off-chain applications/services, which represent the owner behind the accounts, and further present the owner's credibility and reputation from different aspects. In this proposal, we provide a governance app, with gathered participants' info integrated, it could facilitate the governance process, and in the future it could integrate participants' more information from linked accounts on other networks, and encourage more user to join on-chain governance once we provide Litentry native token as incentives. 
 
@@ -22,9 +22,9 @@ There are a few identified issues when it comes to on-chain governance as we exp
 
 a.Low Voting Participation Rate: Currently the on-chain governance participation rate is quite low, even for controversial decisions like Kusama redenomination, (where there is only about 10% of staker holder take part in the vote).
 
-b. Missing Identity Governance Stats: When voting for the council members, it is hard to know who, from all councillors, has made the most contributions to the ecosystem and who has participated the most in the discussions: Currently, there is no dashboard to show on-chain governance stats of identity. Also, on Polkadot.js Apps and Polkassembly, the identity tooltip is limited to certain fields, therefore more information is needed when user browse and participate in governance.
+b. Missing Identity Governance Stats: When voting for the council members, it is hard to know who, from all councillors, has made the most contributions to the ecosystem and who has participated the most in the discussions: Currently, there is no dashboard to show on-chain governance stats of identity. Also, on [Polkadot.js Apps](http://polkadot.js.org/apps/) and [Polkassembly](https://polkadot.polkassembly.io/), the identity tooltip is limited to certain fields, therefore more information is needed when user browse and participate in governance.
 
-c. After browsing the wallets listed on https://wiki.polkadot.network/docs/en/build-wallets, currently there is only Polkawallet native support for governance module. The other wallets either use integrated governance DApp in a WebView, or do not even governance module integration at the moment. Each mobile app has its own governance UI, the engineering power is wasted and lacks interoperability.   
+c. After browsing the wallets listed on https://wiki.polkadot.network/docs/en/build-wallets, currently there is only [Polkawallet](https://polkawallet.io/) native support for governance module. The other wallets either use integrated governance DApp in a WebView, or do not even governance module integration at the moment. Each mobile app has its own governance UI, the engineering power is wasted and lacks interoperability.   
 
 Imtoken |  Math Wallet | Polkawallet
 :-------------------------:|:-------------------------:|:---|
@@ -32,7 +32,7 @@ Imtoken |  Math Wallet | Polkawallet
 
 d. Polkadot.js Apps is mostly used for experienced users or developers. In addition, it includes all the UI to interact with substrate-based blockchains, and it aims to be a general-purpose front-end application.
 
-e. Currently, there is no mobile application could relay the transaction from other wallets on the Polkadot ecosystem. And only few mobile wallets like Parity Signer and Math Wallet could sign the transaction from Polkadot.js Apps. The wallets' ecosystems are relatively closed. 
+e. Currently, there is no mobile application could relay the transaction from other wallets on the Polkadot ecosystem. And only few mobile wallets like Parity Signer and [Math Wallet](https://mathwallet.org/) could sign the transaction from Polkadot.js Apps. The wallets' ecosystems are relatively closed. 
 
 ## 3.	Proposal Objective/solution/s:
 
@@ -64,7 +64,7 @@ We want to create a governance mobile application which could:
 * Native support for off-chain discussion from Polkassemby
 
 #### Milestone 4 Inter-app communication
-* Interact with other wallet app and sign the transactions with inter-app communication (work together with WalletConnect if their protocol has been done).
+* Interact with other wallet app and sign the transactions with inter-app communication (work together with [WalletConnect](https://walletconnect.org/)).
 
 #### Milestone 5 Governance Score and Lottery integration
 * Be able to do OCG actions on different networks.
