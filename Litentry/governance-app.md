@@ -22,7 +22,7 @@ There are a few identified issues when it comes to on-chain governance as we exp
 
 a.Low Voting Participation Rate: Currently the on-chain governance participation rate is quite low, even for controversial decisions like Kusama redenomination, (where there is only about 10% of staker holder take part in the vote).
 
-b. Missing Identity Governance Stats: When voting for the council members, it is hard to know who, from all councillors, has made the most contributions to the ecosystem and who has participated the most in the discussions: Currently, there is no dashboard to show on-chain governance stats of identity. Also, on [Polkadot.js Apps](http://polkadot.js.org/apps/) and [Polkassembly](https://polkadot.polkassembly.io/), the identity tooltip is limited to certain fields, therefore more information is needed when user browse and participate in governance.
+b. Missing Identity Governance Stats: When voting for the council members, it is hard to know who, from all councillors, has made the most contributions to the ecosystem and who has participated the most in the discussions: Currently, there is no dashboard to show on-chain governance stats of identity. Also, on [Polkadot.js Apps](http://polkadot.js.org/apps/) and [Polkassembly](https://polkadot.polkassembly.io/), the identity tooltip is limited to certain fields, therefore more information is needed when user browse and participate in governance. Opensquare has made a [proposal](https://kusama.polkassembly.io/post/352) on Kusama about the treasury reputation recording system, this system is current in web app side.
 
 c. After browsing the wallets listed on https://wiki.polkadot.network/docs/en/build-wallets, currently there is only [Polkawallet](https://polkawallet.io/) native support for governance module. The other wallets either use integrated governance DApp in a WebView, or do not even governance module integration at the moment. Each mobile app has its own governance UI, the engineering power is wasted and lacks interoperability.   
 
@@ -56,12 +56,12 @@ We want to create a governance mobile application which could:
 * Show Identity registration Status on Polkadot/Kusama. 
 
 #### Milestone 2: On-chain governance basic support
-* Native governance actions support on Polkadot/Kusama
+* Native governance actions support on Polkadot/Kusama.
 * Enable interaction with Parity Signer with QR code.
 
 #### Milestone 3: Identity Dashboard
-* Show identity on-chain governance states on Polkadot/Kusama.
-* Native support for off-chain discussion from Polkassemby
+* Show identity on-chain governance states on Polkadot/Kusama.(Extends on Openquare's treasury [reputation data](https://kusama.polkassembly.io/post/352))
+* Native support for off-chain discussion from Polkassemby.
 
 #### Milestone 4 Inter-app communication
 * Interact with other wallet app and sign the transactions with inter-app communication (work together with [WalletConnect](https://walletconnect.org/)).
@@ -69,7 +69,7 @@ We want to create a governance mobile application which could:
 #### Milestone 5 Governance Score and Lottery integration
 * Be able to do OCG actions on different networks.
 * Add gamification score for users who joined on-chain governance.
-* Integrate substrate [lottery](https://hackmd.io/68rduBydTEy4X-ULevd90g) support
+* Integrate substrate [lottery](https://hackmd.io/68rduBydTEy4X-ULevd90g) support.
 
 ### Network Benefit
 
