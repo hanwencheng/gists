@@ -41,8 +41,8 @@ e. There is no mobile application that could relay the transactions from other w
 We want to create a governance mobile application which could:
 
 1. Offer native governance support integration to Polkadot UI and Polkassembly off-chain discussion.
-2. Provide participants governance statistics and gamification score to incentive users to join governance.
-3. Provide interoperability with other mobile wallets (QR code / inter-app communication) to let them sign governance calls.
+2. Improve user engagement by allowing them to receive and customize **Push Notification** of governance-related updates.
+3. Provide participants with good governance statistics and gamification score to incentive users to join governance.
 
 |Current Governance Ecosystem| Targeting Governance Ecosystem|
 |-------------------------|-------------------------|
@@ -51,20 +51,25 @@ We want to create a governance mobile application which could:
 ### Solutions / Milestones
 
 #### Milestone 1: Integrate identity registration
-* Offer user interface to register Identity on Polkadot/Kusama.
-* Submit a new automatic registrar with the status of each field on Polkadot/Kusama.
-* Show Identity registration Status on Polkadot/Kusama.
+* Offer user the capability to verify Identity (e.g. email, riot) in App.
+* Provide a registrar service to automatically verify the submit identity.
+* Display a basic dashboard of governance related activities for this identity
+* Display Identity registration Status on Polkadot/Kusama.
 
 #### Milestone 2: On-chain governance basic support
-* Support native governance actions on Polkadot/Kusama.
-* Enable interaction with Parity Signer with QR code.
+* Support native governance actions on Polkadot/Kusama with good information hierarchy and UX.
+* Allow user to subscribe governance related updates via Push Notification to improve engagement. (e.g. when a new
+  proposal is up, or it either being accepted or rejected.)
+* Build further on governance dashboard, allowing user to see goverance related statistics of any Account. (e.g. if user
+  is browsing a proposal and want to learn more about the **proposer**)
 
-#### Milestone 3: Identity Dashboard
-* Show identity on-chain governance states on Polkadot/Kusama.(Extends on Openquare's treasury [reputation data](https://kusama.polkassembly.io/post/352))
-* Support for off-chain discussion from Polkassemby natively.
 
-#### Milestone 4 Inter-app communication
-* Interact with other wallet app and sign the transactions with inter-app communication (work together with [WalletConnect](https://walletconnect.org/)).
+#### Milestone 3: Identity Dashboard and customization
+* Allow user to further customize **Push Notification** settings to receive tailored governance related digest.
+* ?Show identity on-chain governance states on Polkadot/Kusama.(Extends on Openquare's treasury [reputation data](https://kusama.polkassembly.io/post/352))
+* Allow user to participate in discussions from Polkassemby natively in app.
+* Further enrich governance dashboard's data of an Identity from different chains.
+
 
 #### Milestone 5 Governance Score and Lottery integration
 * Be able to do OCG actions on different networks.
@@ -74,7 +79,7 @@ We want to create a governance mobile application which could:
 ### Network Benefit
 
 * Have more users share their voice on important elections. (`vote`)
-* Encourage users to register on-chain identity. (`identity`,`setIdentity`,`requestJudgement`)
+* Encourage users to register on-chain identity. (`identity`, `setIdentity`, `requestJudgement`)
 * Have users change/update their validator nominations on a regular schedule. (`nominate`)
 * Encourage brainstorming of ideas in future updates and changes (`propose_bounty`)
 * Encourage user to use tipping system (`tip`, `reportAwesome`)
