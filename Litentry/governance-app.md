@@ -58,8 +58,7 @@ We want to create a governance mobile application which could:
 
 #### Milestone 2: On-chain governance basic support
 * Support native governance actions on Polkadot/Kusama with good information hierarchy and UX.
-* Allow user to subscribe governance related updates via Push Notification to improve engagement. (e.g. when a new
-  proposal is up, or it either being accepted or rejected.)
+* Allow user to subscribe governance related updates via Push Notification to improve engagement. (e.g. when a new proposal is up, or it either being accepted or rejected.)
 * Build further on governance dashboard, allowing user to see goverance related statistics of any Account. (e.g. if user
   is browsing a proposal and want to learn more about the **proposer**)
 
