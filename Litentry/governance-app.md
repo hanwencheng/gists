@@ -65,13 +65,13 @@ We want to create a governance mobile application which could:
 
 #### Milestone 3: Identity Dashboard and customization
 * Allow user to further customize **Push Notification** settings to receive tailored governance related digest.
-* ?Show identity on-chain governance states on Polkadot/Kusama.(Extends on Openquare's treasury [reputation data](https://kusama.polkassembly.io/post/352))
+* Show identity on-chain governance states on Polkadot/Kusama.(Extends on Openquare's treasury [reputation data](https://kusama.polkassembly.io/post/352))
 * Allow user to participate in discussions from Polkassemby natively in app.
 * Further enrich governance dashboard's data of an Identity from different chains.
 
 
-#### Milestone 5 Governance Score and Lottery integration
-* Be able to do OCG actions on different networks.
+#### Milestone 4 Governance Score and Lottery integration
+* Be able to do on-chain governance actions on different networks.
 * Add gamification score for users who joined on-chain governance.
 * Integrate substrate [lottery](https://hackmd.io/68rduBydTEy4X-ULevd90g) support.
 
