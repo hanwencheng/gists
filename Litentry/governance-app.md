@@ -51,29 +51,30 @@ We want to create a governance mobile application which could:
 ### Solutions / Milestones
 
 #### Milestone 1: Integrate identity registration
-* Offer user the capability to verify Identity (e.g. email, riot) in App.
-* Provide a registrar service to automatically verify the submit identity.
-* Display a basic dashboard of governance related activities for this identity
-* Display Identity registration Status on Polkadot/Kusama.
+1.1 Offer user the capability to verify Identity (e.g. email, riot) in App.
+1.2 Provide a registrar service to automatically verify the submit identity.
+1.3 Display a basic dashboard of governance related activities for this identity
+1.4 Display Identity registration Status on Polkadot/Kusama.
 
 #### Milestone 2: On-chain governance basic support
-* Support native governance actions on Polkadot/Kusama with good information hierarchy and UX.
-* Allow user to subscribe governance related updates via Push Notification to improve engagement. (e.g. when a new proposal is up, or it either being accepted or rejected.)
-* Build further on governance dashboard, allowing user to see goverance related statistics of any Account. (e.g. if user
-  is browsing a proposal and want to learn more about the **proposer**)
+2.1 Support native governance actions on Polkadot/Kusama with good information hierarchy and UX.
+2.2 Allow user to subscribe governance related updates via Push Notification to improve engagement. (e.g. when a new proposal is up, or it either being accepted or rejected.)
+2.3 Build further on governance dashboard, allowing user to see governance related statistics of any Account. (e.g. if user is browsing a proposal and want to learn more about the **proposer**)
 
 
 #### Milestone 3: Identity Dashboard and customization
-* Allow user to further customize **Push Notification** settings to receive tailored governance related digest.
-* Show identity on-chain governance states on Polkadot/Kusama.(Extends on Openquare's treasury [reputation data](https://kusama.polkassembly.io/post/352))
-* Allow user to participate in discussions from Polkassemby natively in app.
-* Further enrich governance dashboard's data of an Identity from different chains.
+3.1 Allow user to further customize **Push Notification** settings to receive tailored governance related digest.
+3.2 Show identity on-chain governance states on Polkadot/Kusama.(Extends on Openquare's treasury [reputation data](https://kusama.polkassembly.io/post/352))
+3.3 Allow user to participate in discussions from Polkassemby natively in app.
+3.4 Further enrich governance dashboard's data of an Identity from different chains.
+3.5 Interact with other wallet app and sign the transactions with inter-app communication (work together with WalletConnect).
 
 
 #### Milestone 4 Governance Score and Lottery integration
-* Be able to do on-chain governance actions on different networks.
-* Add gamification score for users who joined on-chain governance.
-* Integrate substrate [lottery](https://hackmd.io/68rduBydTEy4X-ULevd90g) support.
+4.1 Be able to do on-chain governance actions on different networks.
+4.2 Build further on Push notification touch point to increase engagement
+4.3 Build further on main dashboard to highlight important proposal or event for community
+4.4 Integrate substrate [lottery](https://hackmd.io/68rduBydTEy4X-ULevd90g) support.
 
 ### Network Benefit
 
@@ -94,10 +95,32 @@ The technical implementation does not have much difference when we compare Polka
 
  ## 5. Payments and Conditions (TBD)
 
- |Milestones | estimate development time | total cost (USD) | DOT value |
- |---|---|---|---|
- |Milestone 1|  100 | 8000 |
- |Milestone 2|  100 | 8000 |
- |Milestone 3|  100 | 8000 |
- |Milestone 4|  100 | 8000 |
- |Milestone 5|  100 | 8000 |
+| Milestone | Task                                                                                                                                         | Research/Design (Hours) | Development (Hours) | Total (Hours) | DOT (Unit) |
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|---------------------|---------------|------------|
+| 1.1       | Design Register Backend (BE) to be able to verify Email, riot and twitter data                                                               | 6                       | 16                  | 22            | 308        |
+| 1.1       | Implement in BE of chain monitoring on identity events                                                                                       | 4                       | 4                   | 8             | 112        |
+| 1.2       | Implementation of submission of judgment based on the verified result                                                                        | 5                       | 16                  | 21            | 294        |
+| 1.2       | Add database layer to BE to persist processed verification                                                                                   | 0                       | 12                  | 12            | 168        |
+| 1.3       | Able to scan address from different source and display its Identity data (e.g. Judgment status)                                              | 6                       | 10                  | 16            | 224        |
+| 1.3       | Support signing Tx with QR code (integration with Parity Signer and other offline wallet)                                                    | 3                       | 12                  | 15            | 210        |
+| 1.4       | Design UI/UX to allow user submit identity Info (via forms)                                                                                  | 2                       | 8                   | 10            | 140        |
+| 1.4       | Allow user to request judgment and display its status                                                                                        | 6                       | 12                  | 18            | 252        |
+|           |                                                                                                                                              |                         |                     |               |            |
+| 2.1       | Design Information hierarchy of governance and implement corresponding UI/UX                                                                 | 6                       | 16                  | 22            | 308        |
+| 2.2       | Implement Backend infrastructure to be able to send Push notification to device                                                              | 4                       | 12                  | 16            | 224        |
+| 2.2       | Implement in App to receive and process Push notification content                                                                            | 6                       | 16                  | 22            | 308        |
+| 2.3       | Build further on governance dashboard with more information                                                                                  | 8                       | 16                  | 24            | 336        |
+| 2.4       | Provide detail screen of certain proposal and user can see in app directly more identity related information of *Proposer*                   | 4                       | 16                  | 20            | 280        |
+|           |                                                                                                                                              |                         |                     |               |            |
+| 3.1       | Design more granular level of Push notification for user to receive, e.g only receive when a proposal is proposed                            | 5                       | 16                  | 21            | 294        |
+| 3.1       | Build UI/UX in app to allow user to customize which Push notification should be received                                                     | 2                       | 12                  | 14            | 196        |
+| 3.2       | Integrate on-chain governance state (Extends from Opensqares proposal)                                                                       | 3                       | 8                   | 11            | 154        |
+| 3.3       | Build UI/UX to integrate Polkassembly functionalities in App                                                                                 | 6                       | 12                  | 18            | 252        |
+| 3.4       | Connect different sources of on-chain governance data from different chains                                                                  | 6                       | 10                  | 16            | 224        |
+| 3.5       | Support WalletConnect protocol as a signing method                                                                                           | 3                       | 12                  | 15            | 210        |
+|           |                                                                                                                                              |                         |                     |               |            |
+| 4.1       | Support more native on chain governance related actions                                                                                      | 6                       | 20                  | 26            | 364        |
+| 4.2       | Build further on Push notification touch point with clear and quick call to action button to participate                                     | 4                       | 12                  | 16            | 224        |
+| 4.3       | Design main dashboard to be able to highlight on-chain governance related event by showing countdown or teaser with prominent call to action | 6                       | 18                  | 24            | 336        |
+| 4.4       | Design and integrate substrate lottery function in to app                                                                                    | 4                       | 12                  | 16            | 224        |
+|           | *Sum*                                                                                                                                        | 105                     | 298                 | 403           | 5642       |
