@@ -8,6 +8,9 @@ Requested DOT: 5642
 Short description: Governance-focused Mobile App for all Substrate-based networks
 
 ---
+
+In this proposal we raise an idea of building a governance-focused app with cross-wallet support, which could encourage user to take part in variant on-chain governance actions and be aware of the identities' history behaviours.
+
 ## 1. Context of Proposal
 
 Hanwen Cheng is the former product owner of [Parity Signer](https://github.com/paritytech/parity-signer). He has rich experience in building mobile and web applications, also very familiar with Substrate based tools. Now he is working for [Litentry Technologies GmbH](https://www.litentry.com/), a technology company focusing on building a [cross-chain identity aggregator](https://litentry.medium.com/why-we-need-cross-chain-identity-on-polkadot-d59a90c9329c), which includes the substrate-based network and related tools. The team has solid substrate development experience and specialization in mobile engineering.
@@ -93,7 +96,13 @@ The governance on Polkadot affects most users, and it is of the most important f
 
 The technical implementation does not have much difference when we compare Polkadot/Kusama/other Substrate-based networks. So we are doing the work firstly on both Polkadot and Kusama, and then it will be extended to all the substrate-based networks.
 
- ## 5. Payments and Conditions (TBD)
+ ## 5. Payments and Conditions
+ 
+ The total estimate time is 403 hours, which will need one designer and two developers involved. Though some task may takes more or less time than what we expect, we will revise it in the future milestones.
+ 
+ It is calculated with hourly rate 70 USD/hour, and the DOT price is calculated by 5 USD, and total value is 28210 USD.
+ 
+There are totally 4 milestones, and detail information of each milestone is listed in the following table.
 
 | Milestone | Task                                                                                                                                         | Research/Design (Hours) | Development (Hours) | Total (Hours) | DOT (Unit) |
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|---------------------|---------------|------------|
@@ -125,4 +134,13 @@ The technical implementation does not have much difference when we compare Polka
 | 4.4       | Design and integrate substrate lottery function in to app                                                                                    | 4                       | 12                  | 16            | 224        |
 |           | *Sum*                                                                                                                                        | 105                     | 298                 | 403           | 5642       |
 
-**Estimated hourly rate**: 70 EUR (14 DOT)
+
+Here is the summary of the 4 milestones.
+
+| Milestone | Research/Design (Hours) | Development (Hours) | Total (Hours) | DOT (Unit) | Dollar Value|
+|---|---|---|---|---|---|
+|milestone 1 | 32   |90	|122|1708|	8540|
+|milestone 2 | 28	|76	|104|1456|	7280|
+|milestone 3 | 25	|70	|95	|1330|	6650|
+|milestone 4 | 20	|62	|82	|1148|	5740|
+|sum         | 105  |298|403|5642| 28210|
