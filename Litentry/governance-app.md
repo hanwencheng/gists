@@ -37,6 +37,8 @@ d. Polkadot.js Apps is mostly employed by experienced users or developers. Besid
 
 e. There is no mobile application that could relay the transactions from other wallets on the Polkadot ecosystem. And only a few mobile wallets like Parity Signer and [Math Wallet](https://mathwallet.org/) could sign the transactions from Polkadot.js Apps. The wallets' ecosystems are relatively closed.
 
+d. When Technical Committee submit emergency proposals, it is critical for councillors to view and react to the proposals in a short time, but there is currently no efficient way to notify the councillors with emergency proposals, especially when the councillors are not sitting in front of its computer.  
+
 ## 3. Proposal Objective/solution/s:
 
 ### Objective
@@ -46,6 +48,7 @@ We want to create a governance mobile application which could:
 1. Offer native governance support integration to Polkadot UI and Polkassembly off-chain discussion.
 2. Improve user engagement by allowing them to receive and customize **Push Notification** of governance-related updates.
 3. Provide participants with good governance statistics and gamification score to incentive users to join governance.
+4. Provide a strong notification for emergency proposals. The notification will only send to user who is logged in as Councillors members and Technical Councillors members. It should provide the fast-tracked for voting and its status.
 
 |Current Governance Ecosystem| Targeting Governance Ecosystem|
 |-------------------------|-------------------------|
