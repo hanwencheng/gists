@@ -3,7 +3,7 @@ Proponent: (Hanwen/Litentry) `12R4GcpJaQyrDAVZJogjg4UEB4X7cnaUwP9B6c8xHaQc3R2S`
 
 Date: 27.11.2020
 
-Requested DOT:
+Requested DOT: 5642
 
 Short description: Governance-focused Mobile App for all Substrate-based networks
 
@@ -133,6 +133,7 @@ There are totally 4 milestones, and detail information of each milestone is list
 | 4.3       | Design main dashboard to be able to highlight on-chain governance related event by showing countdown or teaser with prominent call to action | 6                       | 18                  | 24            | 336        |
 | 4.4       | Design and integrate substrate lottery function in to app                                                                                    | 4                       | 12                  | 16            | 224        |
 |           | *Sum*                                                                                                                                        | 105                     | 298                 | 403           | 5642       |
+
 
 Here is the summary of the 4 milestones.
 
