@@ -151,4 +151,4 @@ Here is the summary of the 4 milestones.
 | milestone 2 | 28                      | 102                 | 139           | 1946       | 9730         |
 | milestone 3 | 25                      | 70                  | 95            | 1330       | 6650         |
 | milestone 4 | 20                      | 62                  | 82            | 1148       | 5740         |
-| sum         | 105                     | 298                 | 403           | 5642       | 28210        |
+| Sum         | 114                     | 324                 | 438           | 6132       | 30660        |
