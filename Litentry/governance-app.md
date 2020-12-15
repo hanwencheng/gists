@@ -37,7 +37,7 @@ d. Polkadot.js Apps is mostly employed by experienced users or developers. Besid
 
 e. There is no mobile application that could relay the transactions from other wallets on the Polkadot ecosystem. And only a few mobile wallets like Parity Signer and [Math Wallet](https://mathwallet.org/) could sign the transactions from Polkadot.js Apps. The wallets' ecosystems are relatively closed.
 
-d. When Technical Committee submit emergency proposals, it is critical for councillors to view and react to the proposals in a timely fashion, but there is currently no efficient way to notify the councillors with emergency proposals, especially when the councillors are not sitting in front of its computer.  
+d. When Council submits emergency proposals, it is critical for councillors to view and react to the proposals in a timely fashion, but there is currently no efficient way to notify the councillors with emergency proposals, especially when the councillors are not sitting in front of its computer.  
 
 ## 3. Proposal Objective/solution/s:
 
