@@ -76,7 +76,7 @@ We want to create a governance mobile application which could:
 3.2 Show identity on-chain governance states on Polkadot/Kusama.(Extends on Openquare's treasury [reputation data](https://kusama.polkassembly.io/post/352))
 3.3 Allow user to participate in discussions from Polkassemby natively in app.
 3.4 Further enrich governance dashboard's data of an Identity from different chains.
-3.5 Interact with other wallet app and sign the transactions with inter-app communication (work together with WalletConnect).
+3.5 Interact with other wallet app and sign the transactions with inter-app communication (work together with WalletConnect [Specification v2](https://docs.walletconnect.org/v/v2.0.0-alpha/tech-spec)).
 
 
 #### Milestone 4 Governance Score and Lottery integration
