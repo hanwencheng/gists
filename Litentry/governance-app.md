@@ -31,21 +31,21 @@ In this proposal, we present a governance app. It could
 
 There are currently a few issues when it comes to on-chain governance on *Polkadot* and *Kusama*:
 
-a. Low Voting Participation Rate: Currently, the on-chain governance participation rate is quite low, even in the case of controversial decisions (such as  *Kusama* redenomination, in which only about 10% of stakeholders participate in the vote).
+1. Low Voting Participation Rate: Currently, the on-chain governance participation rate is quite low, even in the case of controversial decisions (such as  *Kusama* redenomination, in which only about 10% of stakeholders participate in the vote).
 
-b. Missing Identity Governance Stats: When voting for the council members, it is hard to know who, from all councilors, has made the most contributions to the ecosystem and who has participated the most in the discussions. Currently, there is no dashboard to show on-chain governance stats of identity. Also, on [Polkadot.js Apps](http://polkadot.js.org/apps/) and [Polkassembly](https://polkadot.polkassembly.io/), the identity tooltip is limited to certain fields. Therefore richer information is needed to be shown when users browse and participate in governance. Opensquare has made a [proposal](https://kusama.polkassembly.io/post/352) on *Kusama* about the treasury reputation recording system, and this system is currently in the web app side.
+2. Missing Identity Governance Stats: When voting for the council members, it is hard to know who, from all councilors, has made the most contributions to the ecosystem and who has participated the most in the discussions. Currently, there is no dashboard to show on-chain governance stats of identity. Also, on [Polkadot.js Apps](http://polkadot.js.org/apps/) and [Polkassembly](https://polkadot.polkassembly.io/), the identity tooltip is limited to certain fields. Therefore richer information is needed to be shown when users browse and participate in governance. Opensquare has made a [proposal](https://kusama.polkassembly.io/post/352) on *Kusama* about the treasury reputation recording system, and this system is currently in the web app side.
 
-c. After investigating the wallets listed on https://wiki.polkadot.network/docs/en/build-wallets, currently only [Polkawallet](https://polkawallet.io/) natively supports for governance module. The rest wallets either use integrated governance DApp in a WebView, or do not even have governance module integration at the moment. Furthermore, each mobile app has its own governance UI. The engineering power is wasted and lacks interoperability.
+3. After investigating the wallets listed on https://wiki.polkadot.network/docs/en/build-wallets, currently only [Polkawallet](https://polkawallet.io/) natively supports for governance module. The rest wallets either use integrated governance DApp in a WebView, or do not even have governance module integration at the moment. Furthermore, each mobile app has its own governance UI. The engineering power is wasted and lacks interoperability.
 
 Imtoken |  Math Wallet | Polkawallet
 :-------------------------:|:-------------------------:|:---|
 ![imtoken](./imgs/GovernanceImtoken.jpeg)  |  ![mathwallet](./imgs/GovernanceMath.jpeg)| ![polkawallet](./imgs/GovernancePolkawallet.jpeg)
 
-d. Current state of *Polkadot.js Apps* is mostly catered for experienced users or developers. Besides, it exposes low-level APIs to interact with substrate-based blockchains, which introduces frictions for end-users to interact. 
+4. Current state of *Polkadot.js Apps* is mostly catered for experienced users or developers. Besides, it exposes low-level APIs to interact with substrate-based blockchains, which introduces frictions for end-users to interact. 
 
-e. There is no mobile application that could relay the transactions from other wallets on the *Polkadot* ecosystem. And only a few mobile wallets like *Parity Signer* and [Math Wallet](https://mathwallet.org/) could sign the transactions from *Polkadot.js Apps*. The wallet ecosystems are relatively closed.
+5. There is no mobile application that could relay the transactions from other wallets on the *Polkadot* ecosystem. And only a few mobile wallets like *Parity Signer* and [Math Wallet](https://mathwallet.org/) could sign the transactions from *Polkadot.js Apps*. The wallet ecosystems are relatively closed.
 
-d. When Council submits emergency proposals, councilors must view and react to the proposals in a timely fashion, but there is currently no efficient way to notify the councilors in case of emergency proposals. This is especially challenging since councilors are in different time zones.
+6. When Council submits emergency proposals, councilors must view and react to the proposals in a timely fashion, but there is currently no efficient way to notify the councilors in case of emergency proposals. This is especially challenging since councilors are in different time zones.
 
 ## 3. Proposal Objective/solution/s:
 
