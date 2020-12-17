@@ -56,7 +56,7 @@ We want to create a governance mobile application that could:
 1. Offer native governance support integration and Polkassembly off-chain discussion.
 2. Improve user engagement by allowing them to receive and customize **Push Notification** of governance-related updates.
 3. Provide participants with good governance statistics and gamification scores to incentivize users to join governance.
-4. Provide the option to notify App users (in the form of **Push Notification**) for emergency proposals. The notification itself can be customized with a basic ruleset (e.g., users who logged in as Councilors or Technical Councilors members in case of a proposal have to be process urgently)
+4. Provide the option to notify App users (in the form of **Push Notification**) for emergency proposals. The notification itself can be customized with a basic ruleset (e.g., users who logged in as Councilors or Technical Councilors members in case of a proposal have to be processed urgently)
 
 |Current Governance Ecosystem| Targeting Governance Ecosystem|
 |-------------------------|-------------------------|
@@ -72,8 +72,8 @@ We want to create a governance mobile application that could:
 
 #### Milestone 2: On-chain governance basic support
 2.1 Support native governance actions on *Polkadot*/*Kusama* with good information hierarchy and UX/UI.
-2.2 Allow users to subscribe to governance-related updates via Push Notification to improve engagement. (e.g., when a new the proposal is up, or it is either being accepted or rejected.)
-2.3 Build further on a governance dashboard, allowing the user to see governance-related statistics of any Account. (e.g., if user is browsing a proposal and wants to learn more about the **proposer**)
+2.2 Allow users to subscribe to governance-related updates via Push Notification to improve engagement. (e.g., when a new proposal is up, or it is either being accepted or rejected.)
+2.3 Build further on a governance dashboard, allowing the user to see governance-related statistics of any Account. (e.g., if a user is browsing a proposal and wants to learn more about the **proposer**)
 2.4 Support role-based Push Notification subscription of a certain type of on-chain events.
 
 
@@ -119,8 +119,8 @@ There are 4 milestones in total, and the detailed information of each milestone 
 | Milestone | Task                                                                                                                                           | Research/Design (Hours) | Development (Hours) | Total (Hours) | DOT (Unit) | Dollar Value |
 |-----------|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|---------------------|---------------|------------|--------------|
 | 1.1       | Design Register Backend (BE) to be able to verify Email, riot, and Twitter data                                                                | 6                       | 16                  | 22            | 308        | 1540         |
-| 1.1       | Implement in BE of chain monitoring on idenity events                                                                                          | 4                       | 4                   | 8             | 112        | 560          |
-| 1.2       | Implementation of submition of judgment based on the verified result                                                                           | 5                       | 16                  | 21            | 294        | 1470         |
+| 1.1       | Implement in BE of chain monitoring on identity events                                                                                          | 4                       | 4                   | 8             | 112        | 560          |
+| 1.2       | Implementation of submission of judgment based on the verified result                                                                           | 5                       | 16                  | 21            | 294        | 1470         |
 | 1.2       | Add database layer to BE to persist processed verification                                                                                     | 0                       | 12                  | 12            | 168        | 840          |
 | 1.3       | Able to scan address from different source and display its Identity data (e.g. Judgment status)                                                | 6                       | 10                  | 16            | 224        | 1120         |
 | 1.3       | Support signing Tx with QR code (integration with Parity Signer and other offline wallets)                                                     | 3                       | 12                  | 15            | 210        | 1050         |
