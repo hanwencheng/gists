@@ -1,5 +1,5 @@
 # Proposal: [Governance-focused Mobile App for all Substrate-based networks]
-Proponent: (Hanwen/Litentry) `14zExx2SkY7j9HLeBmuz91o3KfSroSAFRFGNtBnEkYNC492U`
+Proposer: (Hanwen/Litentry) `14zExx2SkY7j9HLeBmuz91o3KfSroSAFRFGNtBnEkYNC492U`
 
 Date: 16.12.2020
 
