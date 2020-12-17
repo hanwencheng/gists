@@ -158,3 +158,6 @@ Here is the summary of the 4 milestones.
 | milestone 3 | 25                      | 70                  | 95            | 1330       | 6650         |
 | milestone 4 | 20                      | 62                  | 82            | 1148       | 5740         |
 | Sum         | 114                     | 324                 | 438           | 6132       | 30660        |
+
+Payment suggestion:
+As the proposal will benefit both Polkadot and Kusama network, we could split the proposal with the payment of both DOT and KSM. For example, we accept payments of milestone 1 and 2 in DOT, and accept payments of milestone 3 and 4 in KSM.
