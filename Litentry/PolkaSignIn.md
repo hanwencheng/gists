@@ -70,7 +70,7 @@ The workflow works the same with or without OAuth specification. Only the 4th st
 
 3.  Connect to Signer
 
-    User sends request to the Identity Povider (Injected Signer like : Metamask, Clover wallet ...).
+    User sends request to the Identity Provider (Injected Signer like : Polkadot.js Extension, Metamask, Parity Signer ...).
 
     This action will call up a browser extension or some other external applications.
 
@@ -82,13 +82,14 @@ The workflow works the same with or without OAuth specification. Only the 4th st
     ```
 
 4.  Provide Signature
-    The Identity Povider will generate the Signature data.
+    The Identity Provider will generate the Signature data.
 
     ```
     {
         "identity-type": "eth",
         "public-key": "xxxxxxxx",
-        "account-signed": "xxxxxxxxxx"
+        "account-signed": "xxxxxxxxxx",
+        "scope": ["xxx", "yyy"],
     }
     ```
 
@@ -100,7 +101,7 @@ The workflow works the same with or without OAuth specification. Only the 4th st
 
     - public-key
 
-      With the chain account choosen, get the public key of the account. This field will be used by dApp to decrypt the data and verify data consistency.
+      With the chain account chosen, get the public key of the account. This field will be used by dApp to decrypt the data and verify data consistency.
 
     - account-signed
 
@@ -120,8 +121,12 @@ The workflow works the same with or without OAuth specification. Only the 4th st
       # encrypt account with private-key by the specified algorithmic mechanism: ECIES
 
       ```
+  
+  - scope
+  
+    scope define the permission needed for the dapp to interact with the account.
 
-      The Identity Povider will send the signature data to the callback endpoint of dApp by step #3.
+      The Identity Provider will send the signature data to the callback endpoint of dApp by step #3.
 
 5.  Validation
     The dApp receive the signature data and do the verification.
@@ -135,15 +140,15 @@ The workflow works the same with or without OAuth specification. Only the 4th st
         ```
 
     Verification Steps:
-    - use **publick-key** to decrypt the data of **account-signed** , this progress should be successful, and get the account address.
+    - use **public-key** to decrypt the data of **account-signed** , this progress should be successful, and get the account address.
 
-    - use **publick-key** to generate the address by the specified algorithmic mechanism according to the chain type, and get the account address refer to **publick-key** .
+    - use **public-key** to generate the address by the specified algorithmic mechanism according to the chain type, and get the account address refer to **public-key** .
 
     - verify the two account address , success if they are the same. 
 
-    - if failure, it means the public key does not match the account, it may happens when some malicious users want to impersonate an account.
+    - if failure, it means the public key does not match the account, it may happen when some malicious users want to impersonate an account.
 
-    - if success, the dApp should return the response to the Identity Provider with payload:
+    - if success, the dApp should return the response to the Identity Provider with the payload:
         ```
         {
             "verified": true,
@@ -153,11 +158,7 @@ The workflow works the same with or without OAuth specification. Only the 4th st
 
 6.  Lookup Identity
 
-    The dApp gets the account address . It can retrieve the related information of account from the external service providers , such as ENS,Litentry, etc.
-
-    
-
-#### Access token standard
+    The dApp gets the account address . It can retrieve the related information of account from the external service providers , such as ENS, Polkadot/Kusama Identity Registrar, etc.
 
 ### **Team Background**
 
