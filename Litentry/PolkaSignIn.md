@@ -122,31 +122,37 @@ The workflow works the same with or without OAuth specification. Only the 4th st
 
       ```
   
-  - scope
-  
-    scope define the permission needed for the dapp to interact with the account.
+    - scope
+    
+        scope define the permission needed for the dapp to interact with the account.
 
-      The Identity Provider will send the signature data to the callback endpoint of dApp by step #3.
+    
+    The Identity Provider will send the signature data to the callback endpoint of dApp by step #3.
 
 5.  Validation
-    The dApp receive the signature data and do the verification.
+
+    The dApp receives the signature data and do the verification.
 
         ```
         {
             "identity-type": "eth",
             "public-key": "xxxxxxxx",
-            "account-signed": "xxxxxxxxxx"
+            "account-signed": "xxxxxxxxxx",
+            "scope": ["xxx", "yyy"],
         }
         ```
 
     Verification Steps:
     - use **public-key** to decrypt the data of **account-signed** , this progress should be successful, and get the account address.
 
-    - use **public-key** to generate the address by the specified algorithmic mechanism according to the chain type, and get the account address refer to **public-key** .
+        **public-key** pairs with **private-key**, this step proves the validity of the private key, and ensure that the data was not tampered with.
+     
+
+    - use **public-key** to generate the address by the specified algorithmic mechanism according to the chain type, and get the account address refer to **public-key** .        
 
     - verify the two account address , success if they are the same. 
 
-    - if failure, it means the public key does not match the account, it may happen when some malicious users want to impersonate an account.
+    - if failure, it means the public key does not match the account address, it may happen when some malicious users want to impersonate an account.
 
     - if success, the dApp should return the response to the Identity Provider with the payload:
         ```
