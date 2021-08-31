@@ -65,6 +65,8 @@ The workflow works the same with or without OAuth specification. Only the 4th st
     {
         "identity-type": "eth",
         "callback-endpoint": "http://dapp.com/login/callback",
+        "scope": ["xxx", "yyy"],
+        "chanllenge": xxxxxxxxxx",
     }
     ```
 
@@ -78,6 +80,8 @@ The workflow works the same with or without OAuth specification. Only the 4th st
     {
         "identity-type": "eth",
         "callback-endpoint": "http://dapp.com/login/callback",
+        "scope": ["xxx", "yyy"],
+        "chanllenge": xxxxxxxxxx",
     }
     ```
 
@@ -125,6 +129,10 @@ The workflow works the same with or without OAuth specification. Only the 4th st
     - scope
     
         scope define the permission needed for the dapp to interact with the account.
+        
+    - chanllenge
+        
+        a text string need to be signed by the private key.
 
     
     The Identity Provider will send the signature data to the callback endpoint of dApp by step #3.
